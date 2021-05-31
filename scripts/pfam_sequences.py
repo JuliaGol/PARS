@@ -4,14 +4,14 @@ import requests
 import re
 
 
-def family_seq(families, format='fasta', type='full', download = False, path = '.'):
+def family_seq(families, form='fasta', type='full', download = False, path = None):
     """TO-DO
     """
     result = []
-    formats = ['fasta', 'selex', 'stockholm', 'msf']
+    forms = ['fasta', 'selex', 'stockholm', 'msf']
     types = ['seed', 'full']
-    if format not in formats:
-        raise ValueError("format can be one of following: fasta, selex, stockholm, msf")
+    if form not in forms:
+        raise ValueError("form can be one of following: fasta, selex, stockholm, msf")
     if type not in types:
         raise ValueError("type can be one of following: seed, full")
     if not isinstance(families, (list, str)):
@@ -21,24 +21,27 @@ def family_seq(families, format='fasta', type='full', download = False, path = '
     for family in families:
         url = 'https://pfam.xfam.org/family/%s' % family
         url += '/alignment/%s' % type
-        url += '/format?format=%s&alnType=%s&order=a&case=l&gaps=dashes&download=0' % (format, format)
+        url += '/format?format=%s&alnType=%s&order=a&case=l&gaps=dashes&download=1' % (form, form)
         r = requests.get(url, allow_redirects=True)
         r.raise_for_status()
         result.append(r.text)
         if download:
-            pathname = '%s/%s.%s' % (path, family, format)
-            f = open(pathname, 'wb').write(r.content)
+            if path is not None:
+                pathname = '%s/%s.%s' % (path, family, form)
+            else:
+                pathname = '%s.%s' % (family, form)
+            f = open(pathname, 'w').write(r.text)
     return result
 
 
-def clan_seq(clans, format='fasta', type='full', download = False, path = '.'):
+def clan_seq(clans, form='fasta', type='full', download = False, path = None):
     """TO-DO
     """
     result = []
-    formats = ['fasta', 'selex', 'stockholm', 'msf']
+    forms = ['fasta', 'selex', 'stockholm', 'msf']
     types = ['seed', 'full']
-    if format not in formats:
-        raise ValueError("format can be one of following: fasta, selex, stockholm, msf")
+    if form not in forms:
+        raise ValueError("form can be one of following: fasta, selex, stockholm, msf")
     if type not in types:
         raise ValueError("type can be one of following: seed, full")
     if not isinstance(clans, (list, str)):
@@ -54,12 +57,37 @@ def clan_seq(clans, format='fasta', type='full', download = False, path = '.'):
         for family in set(families):
             url = 'https://pfam.xfam.org/family/%s' % family
             url += '/alignment/%s' % type
-            url += '/format?format=%s&alnType=%s&order=a&case=l&gaps=dashes&download=0' % (format, format)
+            url += '/format?format=%s&alnType=%s&order=a&case=l&gaps=dashes&download=0' % (form, form)
             r = requests.get(url, allow_redirects=True)
             r.raise_for_status()
             clan_seq += r.text
             result.append(r.text)
         if download:
-            pathname = '%s/%s.%s' % (path, clan, format)
+            if path is not None:
+                pathname = '%s/%s.%s' % (path, clan, form)
+            else:
+                pathname = '%s.%s' % (clan, form)
             f = open(pathname, 'w').write(clan_seq)
+    return result
+
+
+def family_tree(families, download = False, path = None):
+    """TO-DO
+    """
+    result = []
+    if not isinstance(families, (list, str)):
+        raise ValueError("incorrect type of families name")
+    if isinstance(families, str):
+        families = [families]
+    for family in families:
+        url = 'https://pfam.xfam.org/family/%s/tree/download' % family
+        r = requests.get(url, allow_redirects=True)
+        r.raise_for_status()
+        result.append(r.text)
+        if download:
+            if path is not None:
+                pathname = '%s/%s.nhx' % (path, family)
+            else:
+                pathname = '%s.nhx' % (family)
+            f = open(pathname, 'w').write(r.text)
     return result
