@@ -2,6 +2,9 @@
 """
 import requests
 import re
+from Bio import Phylo, AlignIO, motifs
+from io import StringIO
+
 
 
 def family_seq(families, form='fasta', type='full', download = False, path = None):
@@ -19,12 +22,16 @@ def family_seq(families, form='fasta', type='full', download = False, path = Non
     if isinstance(families, str):
         families = [families]
     for family in families:
+        print('Now downloading: %s' %family)
         url = 'https://pfam.xfam.org/family/%s' % family
         url += '/alignment/%s' % type
         url += '/format?format=%s&alnType=%s&order=a&case=l&gaps=dashes&download=1' % (form, form)
         r = requests.get(url, allow_redirects=True)
         r.raise_for_status()
-        result.append(r.text)
+        if form != 'selex':
+            result.append(AlignIO.parse(StringIO(r.text), form))
+        else:
+            result.append(motifs.read(r.text))
         if download:
             if path is not None:
                 pathname = '%s/%s.%s' % (path, family, form)
@@ -83,7 +90,8 @@ def family_tree(families, download = False, path = None):
         url = 'https://pfam.xfam.org/family/%s/tree/download' % family
         r = requests.get(url, allow_redirects=True)
         r.raise_for_status()
-        result.append(r.text)
+        tree = Phylo.read(StringIO(r.text), "newick")
+        result.append(tree)
         if download:
             if path is not None:
                 pathname = '%s/%s.nhx' % (path, family)
@@ -91,3 +99,23 @@ def family_tree(families, download = False, path = None):
                 pathname = '%s.nhx' % (family)
             f = open(pathname, 'w').write(r.text)
     return result
+
+
+def get_alternative(families):
+    results = {}
+    if not isinstance(families, (list, str)):
+        raise ValueError("incorrect type of families name")
+    if isinstance(families, str):
+        families = [families]
+    for family in families:
+        url = 'https://pfam.xfam.org/family/%s' % family
+        r = requests.get(url, allow_redirects=True)
+        r.raise_for_status()
+        titles = re.search('<h1>Family:.+?</h1>', r.text).group()
+        acc = titles[titles.find("(")+1:titles.find(")")]
+        id_pfam = titles[titles.find("<em>")+4:titles.find("</em>")]
+        if family == acc:
+            results[acc] = id_pfam
+        else:
+            results[id_pfam] = acc
+    return results
