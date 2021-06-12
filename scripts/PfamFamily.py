@@ -1,3 +1,5 @@
+from xfam_to import *
+
 class PfamFamily(object):
     """class contains information about Pfam familly.
     TO DO
