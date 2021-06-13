@@ -33,16 +33,13 @@ class PfamFamily(XfamObject):
                     self.avarage_coverage = float(columns[7].string)
                     self.changestatus = columns[9].string
                     self.description = columns[10].string
-                    self.tree = self.set_tree()
-                    self.seed = self.__set_seed()
-                    self.full = self.__set_full()
         self.go_ref = pfam_to_go(self.access)
         self.so_ref = pfam_to_so(self.access)
         self.pubmed_ref = pfam_to_pubmed(self.access)
         self.pdb_ref = pfam_to_pdb(self.access)
 
 
-    def __set_full(self):
+    def get_full(self):
         url = 'https://pfam.xfam.org/family/%s' % self.access
         url += '/alignment/full'
         url += '/format?format=fasta&alnType=fasta&order=a&case=l&gaps=dashes&download=1'
@@ -52,7 +49,7 @@ class PfamFamily(XfamObject):
         return full
 
 
-    def __set_seed(self):
+    def get_seed(self):
         url = 'https://pfam.xfam.org/family/%s' % self.access
         url += '/alignment/seed'
         url += '/format?format=fasta&alnType=fasta&order=a&case=l&gaps=dashes&download=1'
