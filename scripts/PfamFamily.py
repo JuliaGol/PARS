@@ -1,7 +1,7 @@
 from xfam_to import *
 from XfamObject import *
 from xfam_to import *
-from get_architectures import *
+from family_architectures import *
 
 class PfamFamily(XfamObject):
     """class contains information about Pfam familly.
