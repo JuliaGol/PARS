@@ -7,6 +7,8 @@ class PfamClan(XfamObject):
     :type access: str
     :param short_name:
     :type short_name:str
+    :param type: type of pfam entry
+    :type type: str
     :param scop_id: SCOP identificator of clan
     :type scop_id: str
     :param description: Short description of clan
