@@ -1,7 +1,5 @@
 import os
 import requests
-import pandas as pd
-
 
 def load_data(filename):
     """
@@ -9,28 +7,30 @@ def load_data(filename):
 
     :param filename: name of csv file with columns with accession numbers with header
     :type filename: str
-    :return: dataframe with data from the file
-    :rtype: dataframe
+    :return: list with data from the file
+    :rtype: list
     """
+    file = open(filename)
+    list = file.readlines()
     try:
-        df = pd.read_csv(filename)
-        return df
+        return list
     except FileNotFoundError:
         print('No stats file found')
 
 
-def get_names(df):
+def get_names(list):
     """
     function to save names from data frame to list
 
-    :param df: dataframe with first column first names
-    :type df: dataframe
+    :param list: list with first column of pfam accession numbers
+    :type list: list
     :return: list of accession numbers
     :rtype: list
     """
     family_names = []
-    for (index, row) in df.iterrows():
-        family_names.append(row.iat[0])
+    for i in range(1,len(list)):
+        splitedlist=list[i].split(",")
+        family_names += [splitedlist[0]]
     if len(family_names) == 0:
         raise ValueError('No families for this number of sequences')
     return family_names
