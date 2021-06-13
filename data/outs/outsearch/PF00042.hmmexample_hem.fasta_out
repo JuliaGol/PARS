@@ -1,0 +1,140 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  example_hmm/PF00042.hmm
+# target sequence database:        example_fasta/example_hem.fasta
+# output directed to file:         outsearch/PF00042.hmmexample_hem.fasta_out
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       Globin  [M=110]
+Accession:   PF00042.24
+Description: Globin
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    5.1e-41  129.3  13.6    7.8e-28   86.9   0.7    2.6  3  AAA29796.1      hemoglobin [Pseudoterranova decipiens]
+    6.4e-23   71.1   0.2    9.5e-23   70.5   0.2    1.3  1  NP_001104966.1  non-symbiotic hemoglobin [Zea mays]
+    9.8e-23   70.5   0.4    1.4e-22   70.0   0.4    1.2  1  NP_001275068.1  hemoglobin [Solanum tuberosum]
+    1.8e-17   53.5   0.0    3.4e-17   52.7   0.0    1.4  2  AAA75506.1      hemoglobin [Vitreoscilla sp. C1]
+
+
+Domain annotation for each sequence (and alignments):
+>> AAA29796.1  hemoglobin [Pseudoterranova decipiens]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   86.9   0.7   2.8e-28   7.8e-28       2     109 ..      22     133 ..      21     134 .. 0.96
+   2 !   51.8   0.8   2.3e-17   6.2e-17      14     109 ..     187     282 ..     171     283 .. 0.94
+   3 ?   -3.2   0.5       2.7       7.4      79      84 ..     304     309 ..     284     323 .. 0.49
+
+  Alignments for each domain:
+  == domain 1  score: 86.9 bits;  conditional E-value: 2.8e-28
+                 HHHHHHHHHHHHT....HHHHHHHHHHHHHHHHSGGGGGGSTTTTTTT-HHHHCTSHHHHHHHHHHHHHHHHHHHTTTSHHHHHHHHHHHHHHHHTST. CS
+      Globin   2 kalvkaswekvka....naeelgaeilkrlFkaypdtkklFkkfgdlssaedlksspkfkahakkvlaalgeavknldndealkaalkklaarHaerg. 95 
+                 ++l+++s e++k     +a++ g +++k++F++yp++kk+Fk+  ++++ +d++++p f ++++ +l a++ +++++d++e+++a++ +l+arH++ + 
+  AAA29796.1  22 RELCMKSLEHAKVgtskEAKQDGIDLYKHMFEHYPAMKKYFKHR-ENYTPADVQKDPFFIKQGQNILLACHVLCATYDDRETFDAYVGELMARHERDHv 119
+                 788999999998899999************************99.77**************************************************** PP
+
+                 T--HHHHHHHHHHH CS
+      Globin  96 kvdpanFklfgeal 109
+                 kv+++ +++f+e++
+  AAA29796.1 120 KVPNDVWNHFWEHF 133
+                 ***********987 PP
+
+  == domain 2  score: 51.8 bits;  conditional E-value: 2.3e-17
+                 THHHHHHHHHHHHHHHHSGGGGGGSTTTTTTT-HHHHCTSHHHHHHHHHHHHHHHHHHHTTTSHHHHHHHHHHHHHHHHTST.T--HHHHHHHHHHH CS
+      Globin  14 anaeelgaeilkrlFkaypdtkklFkkfgdlssaedlksspkfkahakkvlaalgeavknldndealkaalkklaarHaerg.kvdpanFklfgeal 109
+                 ++ +++g +++k++F++yp ++k+Fk   ++ + ed+++++ f    +++ + +  + +++d+++++++++++l++rH++   + +++++ +f++ +
+  AAA29796.1 187 EHQKQNGIDLYKHMFEHYPHMRKAFKGR-ENFTKEDVQKDAFFVNKDTRFCWPFVCCDSSYDDEPTFDYFVDALMDRHIKDDiHLPQEQWHEFWKLF 282
+                 37899*********************99.7799*************************************************************987 PP
+
+  == domain 3  score: -3.2 bits;  conditional E-value: 2.7
+                 HHHHHH CS
+      Globin  79 alkaal 84 
+                 ++ + +
+  AAA29796.1 304 TIGEDF 309
+                 333334 PP
+
+>> NP_001104966.1  non-symbiotic hemoglobin [Zea mays]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   70.5   0.2   3.4e-23   9.5e-23       1     109 [.      17     125 ..      17     126 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 70.5 bits;  conditional E-value: 3.4e-23
+                     HHHHHHHHHHHHHTHHHHHHHHHHHHHHHHSGGGGGGSTTT.TTTT-HHHHCTSHHHHHHHHHHHHHHHHHHHTT...TSHHHHHHHHHHHHHHH CS
+          Globin   1 dkalvkaswekvkanaeelgaeilkrlFkaypdtkklFkkf.gdlssaedlksspkfkahakkvlaalgeavknl...dndealkaalkklaarH 91 
+                     ++alv +sw+ +k++a++lg++++ ++F+ +p++k++F+ f  d  s   l+++pk+k+ha+ v+ + +ea+++l   ++ ++ +++lk l+a+H
+  NP_001104966.1  17 QEALVLKSWAVMKKDAANLGLRFFLKVFEIAPSAKQMFS-FlRD--SDVPLEKNPKLKTHAMSVFVMTCEAAAQLrkaGKVTVRETTLKRLGATH 108
+                     789************************************.7577..469**************************8887777889********** PP
+
+                     HTSTT--HHHHHHHHHHH CS
+          Globin  92 aergkvdpanFklfgeal 109
+                      ++g v + +F++ g al
+  NP_001104966.1 109 LRYG-VADGHFEVTGFAL 125
+                     ****.*******999887 PP
+
+>> NP_001275068.1  hemoglobin [Solanum tuberosum]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   70.0   0.4     5e-23   1.4e-22       1     109 [.       8     116 ..       8     117 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 70.0 bits;  conditional E-value: 5e-23
+                     HHHHHHHHHHHHHTHHHHHHHHHHHHHHHHSGGGGGGSTTT.TTTT-HHHHCTSHHHHHHHHHHHHHHHHHHHTT...TSHHHHHHHHHHHHHHH CS
+          Globin   1 dkalvkaswekvkanaeelgaeilkrlFkaypdtkklFkkf.gdlssaedlksspkfkahakkvlaalgeavknl...dndealkaalkklaarH 91 
+                     ++alv +sw+++k++a e g++++ ++F+ +p++kk+F+ f +d  s+  l ++pk+k hak +l + +ea+ +l   ++  + +++lkk++a+H
+  NP_001275068.1   8 QEALVVKSWGSMKKDAGEWGLKFFLKIFEIAPSAKKMFS-FlKD--SNVPLDQNPKLKVHAKSILVMTCEAAVQLrkaGKVVVRDSTLKKIGATH 99 
+                     789************************************.7688..57***************************76655556789********* PP
+
+                     HTSTT--HHHHHHHHHHH CS
+          Globin  92 aergkvdpanFklfgeal 109
+                      ++g v +++F++ + al
+  NP_001275068.1 100 FKYG-VADEHFEVTKYAL 116
+                     ****.*******998877 PP
+
+>> AAA75506.1  hemoglobin [Vitreoscilla sp. C1]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.7   0.0   1.2e-17   3.4e-17       3     109 ..       8     102 ..       6     103 .. 0.92
+   2 ?   -2.8   0.0         2       5.5       6      37 ..     119     132 ..     109     143 .. 0.53
+
+  Alignments for each domain:
+  == domain 1  score: 52.7 bits;  conditional E-value: 1.2e-17
+                 HHHHHHHHHHHTHHHHHHHHHHHHHHHHSGGGGGGSTTTTTTT-HHHHCTSHHHHHHHHHHHHHHHHHHHTTTSHHHHHHHHHHHHHHHHTSTT--HHH CS
+      Globin   3 alvkaswekvkanaeelgaeilkrlFkaypdtkklFkkfgdlssaedlksspkfkahakkvlaalgeavknldndealkaalkklaarHaergkvdpan 101
+                 + +ka+++ +k++   +++ ++k+lF+++p+++ lF  +g        +s ++ ka a++vlaa +++ +     +a+ +a+kk+a++H++ g v +a+
+  AAA75506.1   8 NIIKATVPVLKEHGVTITTTFYKNLFAKHPEVRPLFD-MGR-Q-----ESLEQPKALAMTVLAAAQNIENL----PAILPAVKKIAVKHCQAG-VAAAH 94 
+                 679**********************************.955.5.....79*************99986655....49****************.***** PP
+
+                 HHHHHHHH CS
+      Globin 102 Fklfgeal 109
+                 ++++g+ l
+  AAA75506.1  95 YPIVGQEL 102
+                 ****9987 PP
+
+  == domain 2  score: -2.8 bits;  conditional E-value: 2
+                 HHHHHHHHTHHHHHHHHHHHHHHHHSGGGGGG CS
+      Globin   6 kaswekvkanaeelgaeilkrlFkaypdtkkl 37 
+                  + w+k+++                   + ++
+  AAA75506.1 119 LDAWGKAYG------------------VIADV 132
+                 334444443..................33333 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (110 nodes)
+Target sequences:                           11  (3176 residues searched)
+Passed MSV filter:                         4  (0.363636); expected 0.2 (0.02)
+Passed bias filter:                        4  (0.363636); expected 0.2 (0.02)
+Passed Vit filter:                         4  (0.363636); expected 0.0 (0.001)
+Passed Fwd filter:                         4  (0.363636); expected 0.0 (1e-05)
+Initial search space (Z):                 11  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.01
+# Mc/sec: 34.94
+//
+[ok]
