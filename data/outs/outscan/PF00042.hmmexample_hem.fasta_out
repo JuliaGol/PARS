@@ -1,0 +1,407 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             example_fasta/example_hem.fasta
+# target HMM database:             example_hmm/PF00042.hmm
+# output directed to file:         outscan/PF00042.hmmexample_hem.fasta_out
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       AAA29796.1  [L=333]
+Description: hemoglobin [Pseudoterranova decipiens]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.6e-42  129.3  13.6    7.1e-29   86.9   0.7    2.6  3  Globin    Globin
+
+
+Domain annotation for each model (and alignments):
+>> Globin  Globin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   86.9   0.7   7.1e-29   7.1e-29       2     109 ..      22     133 ..      21     134 .. 0.96
+   2 !   51.8   0.8   5.6e-18   5.6e-18      14     109 ..     187     282 ..     171     283 .. 0.94
+   3 ?   -3.2   0.5      0.68      0.68      79      84 ..     304     309 ..     284     323 .. 0.49
+
+  Alignments for each domain:
+  == domain 1  score: 86.9 bits;  conditional E-value: 7.1e-29
+                 HHHHHHHHHHHHT....HHHHHHHHHHHHHHHHSGGGGGGSTTTTTTT-HHHHCTSHHHHHHHHHHHHHHHHHHHTTTSHHHHHHHHHHHHHHHHTST. CS
+      Globin   2 kalvkaswekvka....naeelgaeilkrlFkaypdtkklFkkfgdlssaedlksspkfkahakkvlaalgeavknldndealkaalkklaarHaerg. 95 
+                 ++l+++s e++k     +a++ g +++k++F++yp++kk+Fk+  ++++ +d++++p f ++++ +l a++ +++++d++e+++a++ +l+arH++ + 
+  AAA29796.1  22 RELCMKSLEHAKVgtskEAKQDGIDLYKHMFEHYPAMKKYFKHR-ENYTPADVQKDPFFIKQGQNILLACHVLCATYDDRETFDAYVGELMARHERDHv 119
+                 788999999998899999************************99.77**************************************************** PP
+
+                 T--HHHHHHHHHHH CS
+      Globin  96 kvdpanFklfgeal 109
+                 kv+++ +++f+e++
+  AAA29796.1 120 KVPNDVWNHFWEHF 133
+                 ***********987 PP
+
+  == domain 2  score: 51.8 bits;  conditional E-value: 5.6e-18
+                 THHHHHHHHHHHHHHHHSGGGGGGSTTTTTTT-HHHHCTSHHHHHHHHHHHHHHHHHHHTTTSHHHHHHHHHHHHHHHHTST.T--HHHHHHHHHHH CS
+      Globin  14 anaeelgaeilkrlFkaypdtkklFkkfgdlssaedlksspkfkahakkvlaalgeavknldndealkaalkklaarHaerg.kvdpanFklfgeal 109
+                 ++ +++g +++k++F++yp ++k+Fk   ++ + ed+++++ f    +++ + +  + +++d+++++++++++l++rH++   + +++++ +f++ +
+  AAA29796.1 187 EHQKQNGIDLYKHMFEHYPHMRKAFKGR-ENFTKEDVQKDAFFVNKDTRFCWPFVCCDSSYDDEPTFDYFVDALMDRHIKDDiHLPQEQWHEFWKLF 282
+                 37899*********************99.7799*************************************************************987 PP
+
+  == domain 3  score: -3.2 bits;  conditional E-value: 0.68
+                 HHHHHH CS
+      Globin  79 alkaal 84 
+                 ++ + +
+  AAA29796.1 304 TIGEDF 309
+                 333334 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (333 residues searched)
+Target model(s):                           1  (110 nodes)
+Passed MSV filter:                         1  (1); expected 0.0 (0.02)
+Passed bias filter:                        1  (1); expected 0.0 (0.02)
+Passed Vit filter:                         1  (1); expected 0.0 (0.001)
+Passed Fwd filter:                         1  (1); expected 0.0 (1e-05)
+Initial search space (Z):                  1  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: inf
+//
+Query:       sp|P15160.2|TRHBN_PARCA  [L=117]
+Description: RecName: Full=Group 1 truncated hemoglobin trHbN; Short=PtrHb; Short=Truncated Hb; AltName: Full=Hemoglobin; AltName: Full=Myoglobin
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (117 residues searched)
+Target model(s):                           1  (110 nodes)
+Passed MSV filter:                         0  (0); expected 0.0 (0.02)
+Passed bias filter:                        0  (0); expected 0.0 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  1  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: inf
+//
+Query:       NP_001104966.1  [L=165]
+Description: non-symbiotic hemoglobin [Zea mays]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.8e-24   71.1   0.2    8.6e-24   70.5   0.2    1.3  1  Globin    Globin
+
+
+Domain annotation for each model (and alignments):
+>> Globin  Globin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   70.5   0.2   8.6e-24   8.6e-24       1     109 [.      17     125 ..      17     126 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 70.5 bits;  conditional E-value: 8.6e-24
+                     HHHHHHHHHHHHHTHHHHHHHHHHHHHHHHSGGGGGGSTTT.TTTT-HHHHCTSHHHHHHHHHHHHHHHHHHHTT...TSHHHHHHHHHHHHHHH CS
+          Globin   1 dkalvkaswekvkanaeelgaeilkrlFkaypdtkklFkkf.gdlssaedlksspkfkahakkvlaalgeavknl...dndealkaalkklaarH 91 
+                     ++alv +sw+ +k++a++lg++++ ++F+ +p++k++F+ f  d  s   l+++pk+k+ha+ v+ + +ea+++l   ++ ++ +++lk l+a+H
+  NP_001104966.1  17 QEALVLKSWAVMKKDAANLGLRFFLKVFEIAPSAKQMFS-FlRD--SDVPLEKNPKLKTHAMSVFVMTCEAAAQLrkaGKVTVRETTLKRLGATH 108
+                     789************************************.7577..469**************************8887777889********** PP
+
+                     HTSTT--HHHHHHHHHHH CS
+          Globin  92 aergkvdpanFklfgeal 109
+                      ++g v + +F++ g al
+  NP_001104966.1 109 LRYG-VADGHFEVTGFAL 125
+                     ****.*******999887 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (165 residues searched)
+Target model(s):                           1  (110 nodes)
+Passed MSV filter:                         1  (1); expected 0.0 (0.02)
+Passed bias filter:                        1  (1); expected 0.0 (0.02)
+Passed Vit filter:                         1  (1); expected 0.0 (0.001)
+Passed Fwd filter:                         1  (1); expected 0.0 (1e-05)
+Initial search space (Z):                  1  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: inf
+//
+Query:       AAA75506.1  [L=146]
+Description: hemoglobin [Vitreoscilla sp. C1]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.6e-18   53.5   0.0      3e-18   52.7   0.0    1.4  2  Globin    Globin
+
+
+Domain annotation for each model (and alignments):
+>> Globin  Globin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.7   0.0     3e-18     3e-18       3     109 ..       8     102 ..       6     103 .. 0.92
+   2 ?   -2.8   0.0       0.5       0.5       6      37 ..     119     132 ..     109     143 .. 0.53
+
+  Alignments for each domain:
+  == domain 1  score: 52.7 bits;  conditional E-value: 3e-18
+                 HHHHHHHHHHHTHHHHHHHHHHHHHHHHSGGGGGGSTTTTTTT-HHHHCTSHHHHHHHHHHHHHHHHHHHTTTSHHHHHHHHHHHHHHHHTSTT--HHH CS
+      Globin   3 alvkaswekvkanaeelgaeilkrlFkaypdtkklFkkfgdlssaedlksspkfkahakkvlaalgeavknldndealkaalkklaarHaergkvdpan 101
+                 + +ka+++ +k++   +++ ++k+lF+++p+++ lF  +g        +s ++ ka a++vlaa +++ +     +a+ +a+kk+a++H++ g v +a+
+  AAA75506.1   8 NIIKATVPVLKEHGVTITTTFYKNLFAKHPEVRPLFD-MGR-Q-----ESLEQPKALAMTVLAAAQNIENL----PAILPAVKKIAVKHCQAG-VAAAH 94 
+                 679**********************************.955.5.....79*************99986655....49****************.***** PP
+
+                 HHHHHHHH CS
+      Globin 102 Fklfgeal 109
+                 ++++g+ l
+  AAA75506.1  95 YPIVGQEL 102
+                 ****9987 PP
+
+  == domain 2  score: -2.8 bits;  conditional E-value: 0.5
+                 HHHHHHHHTHHHHHHHHHHHHHHHHSGGGGGG CS
+      Globin   6 kaswekvkanaeelgaeilkrlFkaypdtkkl 37 
+                  + w+k+++                   + ++
+  AAA75506.1 119 LDAWGKAYG------------------VIADV 132
+                 334444443..................33333 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (146 residues searched)
+Target model(s):                           1  (110 nodes)
+Passed MSV filter:                         1  (1); expected 0.0 (0.02)
+Passed bias filter:                        1  (1); expected 0.0 (0.02)
+Passed Vit filter:                         1  (1); expected 0.0 (0.001)
+Passed Fwd filter:                         1  (1); expected 0.0 (1e-05)
+Initial search space (Z):                  1  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: inf
+//
+Query:       NP_001275068.1  [L=152]
+Description: hemoglobin [Solanum tuberosum]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.9e-24   70.5   0.4    1.2e-23   70.0   0.4    1.2  1  Globin    Globin
+
+
+Domain annotation for each model (and alignments):
+>> Globin  Globin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   70.0   0.4   1.2e-23   1.2e-23       1     109 [.       8     116 ..       8     117 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 70.0 bits;  conditional E-value: 1.2e-23
+                     HHHHHHHHHHHHHTHHHHHHHHHHHHHHHHSGGGGGGSTTT.TTTT-HHHHCTSHHHHHHHHHHHHHHHHHHHTT...TSHHHHHHHHHHHHHHH CS
+          Globin   1 dkalvkaswekvkanaeelgaeilkrlFkaypdtkklFkkf.gdlssaedlksspkfkahakkvlaalgeavknl...dndealkaalkklaarH 91 
+                     ++alv +sw+++k++a e g++++ ++F+ +p++kk+F+ f +d  s+  l ++pk+k hak +l + +ea+ +l   ++  + +++lkk++a+H
+  NP_001275068.1   8 QEALVVKSWGSMKKDAGEWGLKFFLKIFEIAPSAKKMFS-FlKD--SNVPLDQNPKLKVHAKSILVMTCEAAVQLrkaGKVVVRDSTLKKIGATH 99 
+                     789************************************.7688..57***************************76655556789********* PP
+
+                     HTSTT--HHHHHHHHHHH CS
+          Globin  92 aergkvdpanFklfgeal 109
+                      ++g v +++F++ + al
+  NP_001275068.1 100 FKYG-VADEHFEVTKYAL 116
+                     ****.*******998877 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (152 residues searched)
+Target model(s):                           1  (110 nodes)
+Passed MSV filter:                         1  (1); expected 0.0 (0.02)
+Passed bias filter:                        1  (1); expected 0.0 (0.02)
+Passed Vit filter:                         1  (1); expected 0.0 (0.001)
+Passed Fwd filter:                         1  (1); expected 0.0 (1e-05)
+Initial search space (Z):                  1  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: inf
+//
+Query:       CDZ92723.1  [L=423]
+Description: tubulin, partial [Leannia veloxifera]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (423 residues searched)
+Target model(s):                           1  (110 nodes)
+Passed MSV filter:                         0  (0); expected 0.0 (0.02)
+Passed bias filter:                        0  (0); expected 0.0 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  1  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: inf
+//
+Query:       CAA01399.1  [L=26]
+Description: Tubulin, partial [Haemonchus contortus]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (26 residues searched)
+Target model(s):                           1  (110 nodes)
+Passed MSV filter:                         0  (0); expected 0.0 (0.02)
+Passed bias filter:                        0  (0); expected 0.0 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  1  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: inf
+//
+Query:       NP_001286835.1  [L=453]
+Description: beta-Tubulin at 60D, isoform B [Drosophila melanogaster]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (453 residues searched)
+Target model(s):                           1  (110 nodes)
+Passed MSV filter:                         0  (0); expected 0.0 (0.02)
+Passed bias filter:                        0  (0); expected 0.0 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  1  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: inf
+//
+Query:       NP_523842.2  [L=454]
+Description: beta-Tubulin at 60D, isoform A [Drosophila melanogaster]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (454 residues searched)
+Target model(s):                           1  (110 nodes)
+Passed MSV filter:                         0  (0); expected 0.0 (0.02)
+Passed bias filter:                        0  (0); expected 0.0 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  1  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: inf
+//
+Query:       AHN56630.1  [L=453]
+Description: beta-Tubulin at 60D, isoform B [Drosophila melanogaster]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (453 residues searched)
+Target model(s):                           1  (110 nodes)
+Passed MSV filter:                         0  (0); expected 0.0 (0.02)
+Passed bias filter:                        0  (0); expected 0.0 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  1  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: inf
+//
+Query:       AAF47193.2  [L=454]
+Description: beta-Tubulin at 60D, isoform A [Drosophila melanogaster]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (454 residues searched)
+Target model(s):                           1  (110 nodes)
+Passed MSV filter:                         0  (0); expected 0.0 (0.02)
+Passed bias filter:                        0  (0); expected 0.0 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  1  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: inf
+//
+[ok]
