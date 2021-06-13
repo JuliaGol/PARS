@@ -28,7 +28,7 @@ class PfamFamily(XfamObject):
     :param go_ref: List of GO ids associated with a family
     :type go_ref: list
     :param so_ref: List of SO ids associated with a family
-    :type soe_ref: list
+    :type so_ref: list
     :param pubmed_ref: List of Pubmed ids associated with a family
     :type pubmed_ref: list
     :param pdb_ref: List of PDB names associated with a family
