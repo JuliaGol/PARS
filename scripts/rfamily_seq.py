@@ -1,10 +1,21 @@
 def rfamily_seq(families, form='fasta', download = False, path = None):
-    """TO-DO
+    """This function search for sequences of the family in format and form specified by the user.
+    
+    :param families: accession of the family, or list of the families accession
+    :type families: str or list
+    :param form: Output format of ssequences. Available: fasta, stockholm, defaults to fasta
+    :type form: str, optional
+    :param download: 'True' if download to the file, defaults to False
+    :type download: bool optional
+    :param path: path to the outpur file if download is True
+    :type path: str, optional
+    :return: List of SeqIO type objects
+    :rtype: list
     """
     result = []
     forms = ['fasta', 'stockholm']
     if form not in forms:
-        raise ValueError("form can be one of following: fasta, selex, stockholm, msf")
+        raise ValueError("form can be one of following: fasta, selex,stockholm")
     if not isinstance(families, (list, str)):
         raise ValueError("incorrect type of families name")
     if isinstance(families, str):
