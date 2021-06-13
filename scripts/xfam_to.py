@@ -5,6 +5,11 @@ from urllib.error import HTTPError, URLError
 from bs4 import BeautifulSoup
 
 def _xfam_to(url, pattern, sep='/'):
+    """serch for href pttern in given url respone, should not be used be users.
+    :param url: url
+    :type url: str
+    :param pattern: pattern you are looking for
+    :type pattern: str"""
     try:
         html=urlopen(url)
     except (HTTPError, URLError) as e:
