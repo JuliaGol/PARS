@@ -34,7 +34,7 @@ class XfamObject():
         rep += self.access
         return rep
     
-    def set_tree(self):
+    def get_tree(self):
         if self.type=='clan':
             return None
         url = 'https://%s.xfam.org/family/%s/tree/' % (self.db,self.access)
