@@ -7,7 +7,7 @@ class RfamFamily(XfamObject):
     :type access: str
     :param short_name: Rfam id of family
     :type short_name: str
-    :param type: family
+    :param type: type of rfam entry
     :type type: str
     :param go_ref: List of GO ids associated with a family
     :type go_ref: list
