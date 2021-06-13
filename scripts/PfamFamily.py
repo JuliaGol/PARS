@@ -32,8 +32,8 @@ class PfamFamily(XfamObject):
                     self.avarage_id = float(columns[6].string)
                     self.avarage_coverage = float(columns[7].string)
                     self.changestatus = columns[9].string
-                    self.Description = columns[10].string
-                    self.tree = self.__set_tree()
+                    self.description = columns[10].string
+                    self.tree = self.set_tree()
                     self.seed = self.__set_seed()
                     self.full = self.__set_full()
         self.go_ref = pfam_to_go(self.access)
