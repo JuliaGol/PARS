@@ -1,4 +1,4 @@
-from XfamObject import *
+from xfam_object import *
 from xfam_to import rfam_clan_to_pdb
 
 class RfamClan(XfamObject):
