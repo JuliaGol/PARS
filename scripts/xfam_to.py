@@ -72,3 +72,8 @@ def pfam_to_go(family):
     url ='https://pfam.xfam.org/family/'+family
     pattern='http://www.ebi.ac.uk/ego/'
     return _xfam_to(url, pattern,sep='=')
+
+def pfam_clan_to_pdb(clan):
+    url='http://pfam.xfam.org/clan/'+clan+'/structures'
+    pattern='/structure/[A-Z, 0-9]{4}'
+    return _xfam_to(url,pattern)
