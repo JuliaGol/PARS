@@ -77,3 +77,9 @@ def pfam_clan_to_pdb(clan):
     url='http://pfam.xfam.org/clan/'+clan+'/structures'
     pattern='/structure/[A-Z, 0-9]{4}'
     return _xfam_to(url,pattern)
+
+def rfam_clan_to_pdb(clan):
+    """get a list of associated PDB ids for given rfam access key."""
+    url ='https://rfam.xfam.org/clan/'+clan+'/structures'
+    pattern='http://www.rcsb.org/pdb/'
+    return [i.upper() for i in _xfam_to(url, pattern, sep='=')]
