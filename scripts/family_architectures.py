@@ -6,6 +6,14 @@ from urllib.error import HTTPError, URLError
 from bs4 import BeautifulSoup
 
 def family_architectures(name,clan=False):
+    """ get domains architectures for given name.
+    :param name: pfam access key
+    :type name: str
+    :param clan: Is entry a clan?
+    :type clan: bool
+    :result: list of PfamArchitecture objects
+    :rettype: list
+    """
     name ='?acc='+name if clan else '/'+name
     url='http://pfam.xfam.org/domaingraphics'+name
     try:
