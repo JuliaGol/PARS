@@ -47,7 +47,7 @@ class PfamFamily:
 					self.Description = columns[10].string
 					self.tree = self.__set_tree()
 					self.seed = self.__set_seed()
-					self.full_len = self.__set_full()
+					self.full = self.__set_full()
 		# self.go_ref = pfam_to_go(self.access)
 		# self.so_ref = pfam_to_so(self.access)
 		# self.pubmed_ref = pfam_to_pubmed(self.access)
