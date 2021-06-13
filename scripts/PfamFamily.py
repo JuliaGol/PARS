@@ -5,6 +5,10 @@ from family_architectures import *
 class PfamFamily(XfamObject):
     
     """class contains information about pfam family.
+    :param access: pfam access of family
+    :type access: str
+    :param short_name: pfam id of family
+    :type short_name: str
     :param type: A type of pfam entry
     :type type: str
     :param seed_len: Number o sequences tin the seed alignment of family
@@ -32,6 +36,8 @@ class PfamFamily(XfamObject):
     """
     def __init__(self, family):
         """Constructor method.
+        :param family: pfam access or pfam family id
+        :type family: str
         """
         
         super().__init__(family,db='pfam', type_='family')
