@@ -1,5 +1,6 @@
 from XfamObject import *
 from family_architectures import *
+from xfam_to import *
 
 class PfamClan(XfamObject):
     """conteins information about Pfam clan.
