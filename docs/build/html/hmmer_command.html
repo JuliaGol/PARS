@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>hmmer_command module &mdash; PARS 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="hmmer_file module" href="hmmer_file.html" />
+    <link rel="prev" title="hmm_download module" href="hmm_download.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PARS
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">scripts</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="PfamArchitecture.html">PfamArchitecture module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PfamClan.html">PfamClan module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PfamFamily.html">PfamFamily module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RfamClan.html">RfamClan module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RfamFamily.html">RfamFamily module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="XfamObject.html">XfamObject module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="family_architectures.html">family_architectures module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hammer_to_object.html">hammer_to_object module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hmm_autosearch.html">hmm_autosearch module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hmm_download.html">hmm_download module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">hmmer_command module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hmmer_file.html">hmmer_file module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pfam_sequences.html">pfam_sequences module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rfamily_seq.html">rfamily_seq module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfam_to.html">xfam_to module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PARS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">scripts</a> &raquo;</li>
+        
+      <li>hmmer_command module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/hmmer_command.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-hmmer_command">
+<span id="hmmer-command-module"></span><h1>hmmer_command module<a class="headerlink" href="#module-hmmer_command" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="hmmer_command.hmmpress">
+<span class="sig-prename descclassname"><span class="pre">hmmer_command.</span></span><span class="sig-name descname"><span class="pre">hmmpress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hmmpress'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hmm_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hmmer_command.hmmpress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for HMMpress tool from HAMMER (description from HAMMER manual)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – path to hmmscan tool</p></li>
+<li><p><strong>h</strong> (<em>bool</em>) – Help; print a brief reminder of command line usage and all available options - optional</p></li>
+<li><p><strong>f</strong> (<em>bool</em>) – Force; overwrites any previous hmmpress’ed datafiles. The default is to bitch about any existing files and ask you to delete them first - optional</p></li>
+<li><p><strong>hmm_file</strong> (<em>str</em>) – directory of hmm file</p></li>
+<li><p><strong>fasta_file</strong> (<em>str</em>) – directory of fasta file</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>output from hmmpress - prepared profiles files</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hmmer_command.hmmscan">
+<span class="sig-prename descclassname"><span class="pre">hmmer_command.</span></span><span class="sig-name descname"><span class="pre">hmmscan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hmmscan'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">o</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'out'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tblout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domtblout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pfamtblout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noali</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">notextw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">textw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incdomE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incdomT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cut_ga</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cut_nc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cut_tc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nobias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nonull2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Z</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domZ</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qformat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cpu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stall</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MPI</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hmm_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fasta_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hmmer_command.hmmscan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for HMMscan tool from HAMMER (description from HAMMER manual)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – path to hmmscan tool</p></li>
+<li><p><strong>h</strong> (<em>bool</em>) – Help; print a brief reminder of command line usage and all available options- optional</p></li>
+<li><p><strong>o</strong> (<em>str</em>) – Direct the main human-readable output to a file &lt;f&gt; instead of the default stdout</p></li>
+<li><p><strong>tblout</strong> (<em>str</em><em>, </em><em>optional</em>) – Save a simple tabular (space-delimited) file summarizing the per-target output, with one data line per homologous target model found</p></li>
+<li><p><strong>domtblout</strong> (<em>str</em><em>, </em><em>optional</em>) – Save a simple tabular (space-delimited) file summarizing the per-domain output, with one data line per homologous domain detected in a query sequence for each homologous model</p></li>
+<li><p><strong>pfamtblout</strong> (<em>str</em><em>, </em><em>optional</em>) – Save an especially succinct tabular (space-delimited) file summarizing the per-target output, with one data line per homologous target model found. hmmer user’s guide 99</p></li>
+<li><p><strong>acc</strong> (<em>bool</em>) – Use accessions instead of names in the main output, where available for profiles and/or sequences - optional</p></li>
+<li><p><strong>noali</strong> (<em>bool</em>) – Omit the alignment section from the main output. This can greatly reduce the output volume - optional</p></li>
+<li><p><strong>notextw</strong> (<em>bool</em>) – Unlimit the length of each line in the main output. The default is a limit of 120 characters per line, which helps in displaying the output cleanly on terminals and in editors, but can truncate target profile description lines - optional</p></li>
+<li><p><strong>textw</strong> (<em>int</em><em>, </em><em>optional</em>) – Set the main output’s line length limit to &lt;n&gt; characters per line. The default is 120</p></li>
+<li><p><strong>E</strong> (<em>float</em><em>, </em><em>optional</em>) – In the per-target output, report target profiles with an Evalue of &lt;= &lt;x&gt;. The default is 10.0, meaning that on average, about 10 false positives will be reported per query, so you can see the top of the noise and decide for yourself if it’s really noise</p></li>
+<li><p><strong>T</strong> (<em>float</em><em>, </em><em>optional</em>) – Instead of thresholding per-profile output on E-value, instead report target profiles with a bit score of &gt;= &lt;x&gt;</p></li>
+<li><p><strong>domE</strong> (<em>float</em><em>, </em><em>optional</em>) – In the per-domain output, for target profiles that have already satisfied the per-profile reporting threshold, report individual domains with a conditional E-value of &lt;= &lt;x&gt;</p></li>
+<li><p><strong>domT</strong> (<em>float</em><em>, </em><em>optional</em>) – Instead of thresholding per-domain output on E-value, instead report domains with a bit score of &gt;= &lt;x&gt;. Options for Inclusion Thresholds</p></li>
+<li><p><strong>incE</strong> (<em>float</em><em>, </em><em>optional</em>) – Use an E-value of &lt;= &lt;x&gt; as the per-target inclusion threshold. The default is 0.01, meaning that on average, about 1 100 sean r. eddy false positive would be expected in every 100 searches with different query sequences</p></li>
+<li><p><strong>incT</strong> (<em>float</em><em>, </em><em>optional</em>) – Instead of using E-values for setting the inclusion threshold, instead use a bit score of &gt;= &lt;x&gt; as the per-target inclusion threshold. It would be unusual to use bit score thresholds with hmmscan, because you don’t expect a single score threshold to work for different profiles; different profiles have slightly different expected score distributions</p></li>
+<li><p><strong>incdomE</strong> (<em>float</em><em>, </em><em>optional</em>) – Use a conditional E-value of &lt;= &lt;x&gt; as the per-domain inclusion threshold, in targets that have already satisfied the overall per-target inclusion threshold. The default is 0.01.</p></li>
+<li><p><strong>incdomT</strong> – has been applied specifically using each model’s curated thresholds</p></li>
+<li><p><strong>cut_ga</strong> (<em>bool</em>) – Use the GA (gathering) bit scores in the model to set persequence (GA1) and per-domain (GA2) reporting and inclusion thresholds. GA thresholds are generally considered to be the reliable curated thresholds defining family membership; for example_fasta, in Pfam, these thresholds define what gets included in Pfam Full alignments based on searches with Pfam Seed models - optional</p></li>
+<li><p><strong>cut_nc</strong> (<em>bool</em>) – Use the NC (noise cutoff) bit score thresholds in the model to set per-sequence (NC1) and per-domain (NC2) reporting and inclusion thresholds. NC thresholds are generally considered to be the score of the highest-scoring known false positive - optional</p></li>
+<li><p><strong>cut_tc</strong> (<em>bool</em>) – Use the NC (trusted cutoff) bit score thresholds in the model to set per-sequence (TC1) and per-domain (TC2) reporting and inclusion thresholds. TC thresholds are generally considered to be the score of the lowest-scoring known true positive that is above all known false positives. hmmer user’s guide 101 - optional</p></li>
+<li><p><strong>max</strong> (<em>bool</em>) – Turn off all filters, including the bias filter, and run full Forward/Backward postprocessing on every target. This increases sensitivity somewhat, at a large cost in speed</p></li>
+<li><p><strong>F1</strong> (<em>float</em><em>, </em><em>optional</em>) – Stage 1 (MSV) threshold: promote hits w/ P &lt;= F1  [0.02]</p></li>
+<li><p><strong>F2</strong> (<em>float</em><em>, </em><em>optional</em>) – Stage 2 (Vit) threshold: promote hits w/ P &lt;= F2  [1e-3]</p></li>
+<li><p><strong>F3</strong> (<em>float</em><em>, </em><em>optional</em>) – Stage 3 (Fwd) threshold: promote hits w/ P &lt;= F3  [1e-5]</p></li>
+<li><p><strong>nobias</strong> (<em>bool</em>) – Turn off the bias filter. This increases sensitivity somewhat, but can come at a high cost in speed, especially if the query has biased residue composition (such as a repetitive sequence region, or if it is a membrane protein - optional</p></li>
+<li><p><strong>nonull2</strong> (<em>bool</em>) – Turn off the null2 score corrections for biased composition - optional</p></li>
+<li><p><strong>Z</strong> (<em>float</em><em>, </em><em>optional</em>) – Assert that the total number of targets in your searches is &lt;x&gt;, for the purposes of per-sequence E-value calculations, rather than the actual number of targets seen - optional</p></li>
+<li><p><strong>domZ</strong> (<em>bool</em>) – Assert that the total number of targets in your searches is &lt;x&gt;, for the purposes of per-domain conditional E-value calculations, rather than the number of targets that passed the reporting thresholds.</p></li>
+<li><p><strong>seed</strong> (<em>int</em><em>, </em><em>optional</em>) – Set the random number seed to &lt;n&gt;. Some steps in postprocessing require Monte Carlo simulation. The default is to use a fixed seed (42), so that results are exactly reproducible. 102 sean r. eddy Any other positive integer will give different (but also reproducible) results. A choice of 0 uses an arbitrarily chosen seed - optional</p></li>
+<li><p><strong>qformat</strong> (<em>str</em><em>, </em><em>optional</em>) – Assert that input seqfile is in format &lt;s&gt;, bypassing format autodetection. Common choices for &lt;s&gt; include: fasta, embl, genbank. Alignment formats also work; common choices include: stockholm, a2m, afa, psiblast, clustal, phylip. For more information, and for codes for some less common formats, see main documentation. The string &lt;s&gt; is case-insensitive (fasta or FASTA both work).</p></li>
+<li><p><strong>cpu</strong> (<em>int</em><em>, </em><em>optional</em>) – Set the number of parallel worker threads to &lt;n&gt;. On multicore machines, the default is 2. You can also control this number by setting an environment variable, HMMER_NCPU. There is also a master thread, so the actual number of threads that HMMER spawns is &lt;n&gt;+1. This option is not available if HMMER was compiled with POSIX threads support turned off</p></li>
+<li><p><strong>stall</strong> (<em>bool</em>) – For debugging the MPI master/worker version: pause after start, to enable the developer to attach debuggers to the running master and worker(s) processes. Send SIGCONT signal to release the pause. (Under gdb: (gdb) signal SIGCONT) (Only available if optional MPI support was enabled at compiletime.) - optional</p></li>
+<li><p><strong>MPI</strong> (<em>bool</em>) – Run under MPI control with master/worker parallelization (using mpirun, for example_fasta, or equivalent). Only available if optional MPI support was enabled at compile-time. Required argumnets - optional</p></li>
+<li><p><strong>hmm_file</strong> (<em>str</em>) – directory of hmm file</p></li>
+<li><p><strong>fasta_file</strong> (<em>str</em>) – directory of fasta file</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>output file from hmmscan</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hmmer_command.hmmsearch">
+<span class="sig-prename descclassname"><span class="pre">hmmer_command.</span></span><span class="sig-name descname"><span class="pre">hmmsearch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hmmsearch'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">o</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'out'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tblout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domtblout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pfamtblout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noali</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">notextw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">textw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incdomE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incdomT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cut_ga</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cut_nc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cut_tc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nobias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nonull</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Z</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domZ</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tformat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cpu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hmm_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fasta_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hmmer_command.hmmsearch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for HMMsearch tool from HAMMER (description from HAMMER manual)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – path to hmmscan tool</p></li>
+<li><p><strong>h</strong> (<em>bool</em>) – Help; print a brief reminder of command line usage and all available options - optional</p></li>
+<li><p><strong>o</strong> (<em>str</em>) – direct output to file &lt;f&gt;, not stdout</p></li>
+<li><p><strong>A</strong> (<em>str</em><em>, </em><em>optional</em>) – save multiple alignment of all hits to file &lt;f&gt;</p></li>
+<li><p><strong>tblout</strong> (<em>str</em><em>, </em><em>optional</em>) – save parseable table of per-sequence hits to file &lt;f&gt;</p></li>
+<li><p><strong>domtblout</strong> (<em>str</em><em>, </em><em>optional</em>) – save parseable table of per-domain hits to file &lt;f&gt;</p></li>
+<li><p><strong>pfamtblout</strong> (<em>str</em><em>, </em><em>optional</em>) – save table of hits and domains to file, in Pfam format &lt;f&gt;</p></li>
+<li><p><strong>acc</strong> (<em>bool</em>) – prefer accessions over names in output - optional</p></li>
+<li><p><strong>noali</strong> (<em>bool</em>) – don’t output alignments, so output is smaller - optional</p></li>
+<li><p><strong>notextw</strong> (<em>bool</em>) – unlimit ASCII text output line width - optional</p></li>
+<li><p><strong>textw</strong> (<em>int</em><em>, </em><em>optional</em>) – set max width of ASCII text output lines  [120]  (n&gt;=120)</p></li>
+<li><p><strong>E</strong> (<em>float</em><em>, </em><em>optional</em>) – report sequences &lt;= this E-value threshold in output  [10.0]  (x&gt;0)</p></li>
+<li><p><strong>T</strong> (<em>float</em><em>, </em><em>optional</em>) – report sequences &gt;= this score threshold in output</p></li>
+<li><p><strong>domE</strong> (<em>float</em><em>, </em><em>optional</em>) – report domains &lt;= this E-value threshold in output  [10.0]  (x&gt;0)</p></li>
+<li><p><strong>domT</strong> (<em>float</em><em>, </em><em>optional</em>) – report domains &gt;= this score cutoff in output</p></li>
+<li><p><strong>incE</strong> (<em>float</em><em>, </em><em>optional</em>) – consider sequences &lt;= this E-value threshold as significant</p></li>
+<li><p><strong>incT</strong> (<em>float</em><em>, </em><em>optional</em>) – consider sequences &gt;= this score threshold as significant</p></li>
+<li><p><strong>incdomE</strong> (<em>float</em><em>, </em><em>optional</em>) – consider domains &lt;= this E-value threshold as significant</p></li>
+<li><p><strong>incdomT</strong> (<em>float</em><em>, </em><em>optional</em>) – consider domains &gt;= this score threshold as significant</p></li>
+<li><p><strong>cut_ga</strong> (<em>bool</em>) – use profile’s GA gathering cutoffs to set all thresholding - optional</p></li>
+<li><p><strong>cut_nc</strong> (<em>bool</em>) – use profile’s NC noise cutoffs to set all thresholding -  optional</p></li>
+<li><p><strong>cut_tc</strong> (<em>bool</em>) – use profile’s TC trusted cutoffs to set all thresholding - optional</p></li>
+<li><p><strong>max</strong> (<em>bool</em>) – Turn all heuristic filters off (less speed, more power) - optional</p></li>
+<li><p><strong>F1</strong> (<em>float</em><em>, </em><em>optional</em>) – Stage 1 (MSV) threshold: promote hits w/ P &lt;= F1  [0.02]</p></li>
+<li><p><strong>F2</strong> (<em>float</em><em>, </em><em>optional</em>) – Stage 2 (Vit) threshold: promote hits w/ P &lt;= F2  [1e-3]</p></li>
+<li><p><strong>F3</strong> (<em>float</em><em>, </em><em>optional</em>) – Stage 3 (Fwd) threshold: promote hits w/ P &lt;= F3  [1e-5]</p></li>
+<li><p><strong>nobias</strong> (<em>bool</em>) – turn off composition bias filter - optional</p></li>
+<li><p><strong>nonull</strong> (<em>bool</em>) – turn off biased composition score corrections - optional</p></li>
+<li><p><strong>Z</strong> (<em>float</em><em>, </em><em>optional</em>) – set # of comparisons done, for E-value calculation</p></li>
+<li><p><strong>domZ</strong> (<em>float</em><em>, </em><em>optional</em>) – set # of significant seqs, for domain E-value calculation</p></li>
+<li><p><strong>seed</strong> (<em>int</em><em>, </em><em>optional</em>) – set RNG seed to &lt;n&gt; (if 0: one-time arbitrary seed)  [42]</p></li>
+<li><p><strong>tformat</strong> (<em>str</em><em>, </em><em>optional</em>) – assert target &lt;seqfile&gt; is in format &lt;s&gt;: no autodetection</p></li>
+<li><p><strong>cpu</strong> (<em>int</em><em>, </em><em>optional</em>) – number of parallel CPU workers to use for multithreads  [1]</p></li>
+<li><p><strong>hmm_file</strong> (<em>str</em>) – directory of hmm file</p></li>
+<li><p><strong>fasta_file</strong> (<em>str</em>) – directory of fasta file</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>output file from hmmsearch</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>file</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="hmmer_file.html" class="btn btn-neutral float-right" title="hmmer_file module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="hmm_download.html" class="btn btn-neutral float-left" title="hmm_download module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Julia Gołębiowska, Adam Cicherski, Patrycja Owczarek.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

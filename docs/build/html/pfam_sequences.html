@@ -1,0 +1,327 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pfam_sequences module &mdash; PARS 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="rfamily_seq module" href="rfamily_seq.html" />
+    <link rel="prev" title="hmmer_file module" href="hmmer_file.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PARS
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">scripts</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="PfamArchitecture.html">PfamArchitecture module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PfamClan.html">PfamClan module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PfamFamily.html">PfamFamily module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RfamClan.html">RfamClan module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RfamFamily.html">RfamFamily module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="XfamObject.html">XfamObject module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="family_architectures.html">family_architectures module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hammer_to_object.html">hammer_to_object module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hmm_autosearch.html">hmm_autosearch module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hmm_download.html">hmm_download module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hmmer_command.html">hmmer_command module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hmmer_file.html">hmmer_file module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pfam_sequences module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rfamily_seq.html">rfamily_seq module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfam_to.html">xfam_to module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PARS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">scripts</a> &raquo;</li>
+        
+      <li>pfam_sequences module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/pfam_sequences.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pfam_sequences">
+<span id="pfam-sequences-module"></span><h1>pfam_sequences module<a class="headerlink" href="#module-pfam_sequences" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="pfam_sequences.clan_members">
+<span class="sig-prename descclassname"><span class="pre">pfam_sequences.</span></span><span class="sig-name descname"><span class="pre">clan_members</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clans</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pfam_sequences.clan_members" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function return the dictionary of pfam families belonging to the clans</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>clans</strong> – list or string with the name of the clan</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Ditionary of clan name as key and clan members as value</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pfam_sequences.family_seq">
+<span class="sig-prename descclassname"><span class="pre">pfam_sequences.</span></span><span class="sig-name descname"><span class="pre">family_seq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">families</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">form</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fasta'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'full'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">download</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pfam_sequences.family_seq" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function search for sequences of the family in format and form specified by the user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>families</strong> (<em>str</em><em> or </em><em>list</em>) – Id or accession of the family, or list of the families names</p></li>
+<li><p><strong>form</strong> (<em>str</em><em>, </em><em>optional</em>) – Output format of ssequences. Available: fasta, selex, stockholm, msf, defaults to fasta</p></li>
+<li><p><strong>type</strong> (<em>str</em><em>, </em><em>optional</em>) – A type of the sequences from the fmaily site. Available: full, seed, defaults to full</p></li>
+<li><p><strong>download</strong> (<em>bool optional</em>) – ‘True’ if download to the file, defaults to False</p></li>
+<li><p><strong>path</strong> (<em>str</em><em>, </em><em>optional</em>) – path to the outpur file if download is True</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of SeqIO type objects</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pfam_sequences.family_tree">
+<span class="sig-prename descclassname"><span class="pre">pfam_sequences.</span></span><span class="sig-name descname"><span class="pre">family_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">families</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">download</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pfam_sequences.family_tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function search for phylogenetic tree of the family in the Newick format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>families</strong> (<em>str</em><em> or </em><em>list</em>) – Id or accession of the family, or list of the families names</p></li>
+<li><p><strong>download</strong> (<em>bool optional</em>) – ‘True’ if download to the file, defaults to False</p></li>
+<li><p><strong>path</strong> (<em>str</em><em>, </em><em>optional</em>) – path to the outpur file if download is True</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of PhyloIO type objects</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pfam_sequences.get_alternative">
+<span class="sig-prename descclassname"><span class="pre">pfam_sequences.</span></span><span class="sig-name descname"><span class="pre">get_alternative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">families</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pfam_sequences.get_alternative" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function give alternative name for the family - for id it gves accession,
+for accession - gives id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>families</strong> (<em>str</em><em> or </em><em>list</em>) – Id or accession of the family</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dictionary with the accession as key and id as value</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pfam_sequences.go_terms">
+<span class="sig-prename descclassname"><span class="pre">pfam_sequences.</span></span><span class="sig-name descname"><span class="pre">go_terms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">family</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pfam_sequences.go_terms" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function give go terms connected to the pfam family</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>families</strong> (<em>str</em>) – Id or accession of the family</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Set of go terms</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>set</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="rfamily_seq.html" class="btn btn-neutral float-right" title="rfamily_seq module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="hmmer_file.html" class="btn btn-neutral float-left" title="hmmer_file module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Julia Gołębiowska, Adam Cicherski, Patrycja Owczarek.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
