@@ -18,8 +18,9 @@ def family_architectures(name,clan=False):
     url='http://pfam.xfam.org/domaingraphics'+name
     try:
         html=urlopen(url)
-    except:
-        pass
+    except (HTTPError, URLError) as e:
+        print(e)
+        return []
     else:
         soup=BeautifulSoup(html, 'html.parser')
         architectures=[]
