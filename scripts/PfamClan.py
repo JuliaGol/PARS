@@ -1,16 +1,12 @@
-class PfamClan(object):
-    """class conteins information about Pfam clan"""
-    def __init__(self,*,acc=None,name=None):        
-        self.accesion=acc
-        self.short_name=name
-        if self.accesion is None and self.short_name is None:
-            raise ValueError()
-        elif self.accesion is None:
-            pass #get_alternative()
-        elif self.short_name is None:
-            pass #get_alternative()
-        
-        url='http://pfam.xfam.org/clan/bbrowse'
+from XfamObject import *
+from get_architectures import *
+
+class PfamClan(XfamObject):
+    """class conteins information about Pfam clan."""
+    def __init__(self,clan):                
+        super().__init__(clan,db='pfam', type_='clan')
+        self.type='clan'
+        url='http://pfam.xfam.org/clan/browse'
         try:
             html=urlopen(url)
         except (HTTPError, URLError) as e:
@@ -20,11 +16,15 @@ class PfamClan(object):
             soup=BeautifulSoup(html, 'html.parser')
             table=soup.find('table',attrs={"class": "details browse"})
             for a in table.find_all('a',href=True):
-                if a.string==self.accesion:
+                if a.string==self.access:
                     tr=a.parent.parent
                     columns=tr.find_all('td')
-                    self.scop_id=columns[2].span.string
+                    if columns[2].span:
+                        self.scop_id=None
+                    else:
+                        self.scop_id="".join(filter(str.isdigit, columns[2].a.string))
                     self.description=columns[3].string
-        # clan members
-        # clan structures
-        # clan sequences
+        self.pdb_ref=pfam_clan_to_pdb(self.access)
+        
+    def get_architectures(self):
+        return family_architectures(self.access,clan=True)
