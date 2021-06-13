@@ -42,11 +42,11 @@ class PfamFamily(XfamObject):
         
         super().__init__(family,db='pfam', type_='family')
         if re.match('[0-9]', self.short_name[0]):
-            self.p = 'numbers'
+            p = 'numbers'
         else:
-            self.p = self.short_name[0].lower()
+            p = self.short_name[0].lower()
         try:
-            url = 'http://pfam.xfam.org/family/browse?browse=' + self.p
+            url = 'http://pfam.xfam.org/family/browse?browse=' + p
             html = urlopen(url)
         except (HTTPError, URLError) as e:
             print(e, url)
