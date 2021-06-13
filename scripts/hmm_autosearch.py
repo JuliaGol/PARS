@@ -17,6 +17,7 @@ def automatic_search(hmm_dir, fasta_dir, out_dir, mode):
     :param mode:  "scan" for hmmscan or "search" for hmmsearch of HMMER tool
     :type mode: str
     :return: outputs for hmmscan or hmmsearch
+    :rtype: file
     """
     dir_hmm_list = os.listdir(hmm_dir)
     dir_fasta_list = os.listdir(fasta_dir)

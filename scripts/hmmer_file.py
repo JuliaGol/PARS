@@ -94,6 +94,7 @@ class HMMERProfileFileBuilder:
     """
     return length of profile
     :return: length of profile
+    :rtype: int
     """
     self.leng = len(self.profile["match_emission"])
     return self.leng
@@ -118,6 +119,7 @@ class HMMERProfileFileBuilder:
     print out object
 
     :return: string representation of objct
+    :rtype: str
     """
     list_match = self.profile["match_emission"]
     list_insert = self.profile["insert_emission"]
@@ -134,6 +136,7 @@ class HMMERProfileFileBuilder:
 
     :param filename: name of new hmm file which will be created
     :return: hmm file
+    :rtype: file
     """
     file = open(filename, "w")
     length_model = self.get_length() - 1

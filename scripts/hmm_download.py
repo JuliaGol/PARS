@@ -10,6 +10,7 @@ def load_data(filename):
     :param filename: name of csv file with columns with accession numbers with header
     :type filename: str
     :return: dataframe with data from the file
+    :rtype: dataframe
     """
     try:
         df = pd.read_csv(filename)
@@ -25,6 +26,7 @@ def get_names(df):
     :param df: dataframe with first column first names
     :type df: dataframe
     :return: list of accession numbers
+    :rtype: list
     """
     family_names = []
     for (index, row) in df.iterrows():
@@ -43,6 +45,7 @@ def download_hmm(families, dir):
     :param dir: name of directory to which data are downloaded
     :type dir: str
     :return: downloaded hmm files from pfam
+    :rtype: file
     """
     global type
     for family in families:

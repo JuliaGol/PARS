@@ -10,6 +10,7 @@ def to_dict(tab, mode):
     :param mode: 1 for "match_emission" line of file,  2 for "insert_emission" line of file and 3 for "state_transition" line of file as is the order in HMM block
     :type mode: int
     :return: dictionary of emmision -log 0.25 probabilities and transition -log 0.25 probabilities
+    :rtype: dict
     """
     dict = {}
     listaa = ["A", "C", "D", "E", "F", "G", "H", "I", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "Y"] #aa alphabet
@@ -39,7 +40,8 @@ def file_to_object(filename):
 
     :param filename:  name or path of HMMER profile file
     :type filename: str
-    :return: HMMERProfileFileBuilder object
+    :return: HMMERProfileFileBuilder object build from file
+    :rtype: HMMERProfileFileBuilder object
     """
     match_emission = []
     insert_emission = []
