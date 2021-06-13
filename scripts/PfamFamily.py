@@ -3,10 +3,37 @@ from XfamObject import *
 from family_architectures import *
 
 class PfamFamily(XfamObject):
-    """class contains information about Pfam familly.
-    TO DO
+    
+    """class contains information about pfam family.
+    :param type: A type of pfam entry
+    :type type: str
+    :param seed_len: Number o sequences tin the seed alignment of family
+    :type seed_len: int
+    :param full_len: Number of sequences in the full alignment of family
+    :type full_len: int
+    :param avarage_len: Avarage length of amino-acid regions in the full alignment 
+    :type: float
+    :param avarage_id: Avarage percentage identity of sequences in the full alignment
+    :type avarage_id: float
+    :param avarage_coverage: Fraction of whole sequence length that pfam entry covers
+    :type avarage_coverage: float
+    :param changestatus: Has family been changes or been added in this pfam realse?
+    :type changestatus: str
+    :param description: A short description of the family
+    :type description: str
+    :param go_ref: List of GO ids associated with a family
+    :type go_ref: list
+    :param so_ref: List of SO ids associated with a family
+    :type soe_ref: list
+    :param pubmed_ref: List of Pubmed ids associated with a family
+    :type pubmed_ref: list
+    :param pdb_ref: List of PDB names associated with a family
+    :type pdb_ref: list
     """
     def __init__(self, family):
+        """Constructor method.
+        """
+        
         super().__init__(family,db='pfam', type_='family')
         if re.match('[0-9]', self.short_name[0]):
             self.p = 'numbers'
@@ -40,6 +67,11 @@ class PfamFamily(XfamObject):
 
 
     def get_full(self):
+        """Get full alignemts of PfamFamily sequences in the fasta format.
+        
+        :return: Biopython generator of sequences from alignment  
+        :rtype: generator
+        """
         url = 'https://pfam.xfam.org/family/%s' % self.access
         url += '/alignment/full'
         url += '/format?format=fasta&alnType=fasta&order=a&case=l&gaps=dashes&download=1'
@@ -50,6 +82,11 @@ class PfamFamily(XfamObject):
 
 
     def get_seed(self):
+        """Get seed alignemts of PfamFamily sequences in the fasta format.
+        
+        :return: Biopython generator of sequences from alignment  
+        :rtype: generator
+        """
         url = 'https://pfam.xfam.org/family/%s' % self.access
         url += '/alignment/seed'
         url += '/format?format=fasta&alnType=fasta&order=a&case=l&gaps=dashes&download=1'
@@ -59,5 +96,10 @@ class PfamFamily(XfamObject):
         return seed
     
     def get_architectures(self):
+        """Get a list of architectures of PfamFamily.
+        
+        :return: list of PfamArchitecture objects
+        :rettype: list
+        """
         return family_architectures(self.access)
 
