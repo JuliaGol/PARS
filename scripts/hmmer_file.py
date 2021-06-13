@@ -12,36 +12,60 @@ class HMMERProfileFileBuilder:
   """
   def __init__(self, version, name, acc, desc, alph, rf, mm, cons, cs, map, date, nseq, effn,
                cksum, ga, tc, nc, bm, sm, stats_local_msv, stats_local_viterbi, stats_local_forward, match_emission, insert_emission, state_transition):
-    """ class for parsing HMMER profile file
+    """class for parsing HMMER profile file
       This class uses following arguments:
-         version <str>
-         name <str>
-         acc <str>
-         desc <str>
-         alph <str>
-         rf <bool>
-         mm <bool>
-         cons <bool>
-         cs <bool>
-         map <bool>
-         date <str>
-         nseq <int>
-         effn <float>
-         cksum <int>
-         ga  <list>
-         tc <list>
-         nc <list>
-         bm <str>
-         sm <str>
-         stats_local_msv <list>
-         stats_local_viterbi <list>
-         stats_local_forward <list>
-         match_emission <dict> - dictionary where letters of alphabet are keys and value is − log 0.25 of probability
-         insert_emission <dict> -  dictionary where letters of alphabet are keys and value is − log 0.25 of probability
-         state_transition <dict> -  dictionary where tuple of states where transition is from stste from first position to state from secounnd position
-                                 are keys and value is − log 0.25 of probability
 
-     """
+    :param version: version of hmm tool
+    :type version: str
+    :param name: name of protein
+    :type name: str
+    :param acc: accession number
+    :type acc: str
+    :param desc: short description of protein
+    :param alph: type of alphabet
+    :type alph: str
+    :param rf: Reference annotation flag
+    :type rf: bool
+    :param mm: Model masked flag
+    :type mm: bool
+    :param cons: Consensus residue annotation flag
+    :type cons: bool
+    :param cs: Consensus structure annotation flag
+    :type cs: bool
+    :param map: Map annotation flag
+    :type map: bool
+    :param date: Date the model was constructed
+    :type data: str
+    :param nseq: Sequence number
+    :type nseq: int
+    :param effn: Effective sequence number
+    :type effn: float
+    :param cksum: Training alignment checksum
+    :type cksum: int
+    :param ga: Pfam gathering thresholds GA1 and GA2. See Pfam documentation of GA lines
+    :type ga: list
+    :param tc: Pfam trusted cutoffs TC1 and TC2. See Pfam documentation of TC lines
+    :type tc: list
+    :param nc: Pfam noise cutoffs NC1 and NC2. See Pfam documentation of NC lines
+    :type nc: list
+    :param bm: hmmbuild command
+    :type bm: str
+    :param sm: hmmsearch command
+    :type sm: str
+    :param stats_local_msv: statistics of local msv
+    :type stats_local_msv: list
+    :param stats_local_viterbi: statistics of local viterbi
+    :type stats_local_viterbi: list
+    :param stats_local_forward: statistics of local forward:
+    :type stats_local_forward: list
+    :param match_emission: dictionary of -log0.25 probabilities of match emission
+    :type match_emission: dict
+    :param insert_emission: dictionary of -log0.25 probabilities of insert emission
+    :type insert_emission: dict
+    :param state_transition: dictionary of -log0.25 probabilities of state transitions
+    :type state_transition: dict
+    """
+
     self.version = version
     self.name = name
     self.acc = acc
@@ -69,6 +93,7 @@ class HMMERProfileFileBuilder:
   def get_length(self):
     """
     return length of profile
+    :return: length of profile
     """
     self.leng = len(self.profile["match_emission"])
     return self.leng
@@ -76,6 +101,13 @@ class HMMERProfileFileBuilder:
   def add_position(self, match_emission, insert_emission, state_transition):
     """
     adding match_emission probabilities, insert_emission probabilities, state_transition probabilities of new position
+
+    :param match_emission: dictionary of -log0.25 probabilities of match emission
+    :type match_emission: dict
+    :param insert_emission: dictionary of -log0.25 probabilities of insert emission
+    :type insert_emission: dict
+    :param state_transition: dictionary of -log0.25 probabilities of state transition
+    :type state_transition: dict
     """
     self.profile["match_emission"] += [match_emission]
     self.profile["insert_emission"] += [insert_emission]
@@ -84,12 +116,14 @@ class HMMERProfileFileBuilder:
   def __str__(self):
     """
     print out object
+
+    :return: string representation of objct
     """
     list_match = self.profile["match_emission"]
     list_insert = self.profile["insert_emission"]
     list_transition = self.profile["state_transition"]
     length_model = self.get_length()
-    model_str="M - match emmision I - insert emmision T - state transition length =" + length_model + "\n"
+    model_str="M - match emmision I - insert emmision T - state transition length =" + str(length_model) + "\n"
     for i in range(length_model):
       model_str += str(i) + '\t' + 'M' + '\t' + str(list_match[i]) + '\n' + '\t' + 'I' + '\t' +  str(list_insert[i]) + '\n' + '\t' + 'T' + '\t' + str(list_transition[i]) + '\n'
     return model_str.strip()
@@ -97,6 +131,9 @@ class HMMERProfileFileBuilder:
   def file_format(self, filename):
     """
     save object to HMMER profile file which could be used for calculation by hmmsearch and hmmscan
+
+    :param filename: name of new hmm file which will be created
+    :return: hmm file
     """
     file = open(filename, "w")
     length_model = self.get_length() - 1

@@ -1,13 +1,15 @@
-import argparse
 import os
-from progress.bar import Bar
 import requests
 import pandas as pd
 
 
 def load_data(filename):
     """
-    function which load data with family codes from csv to dataframe
+    function to load data with family codes from csv to dataframe
+
+    :param filename: name of csv file with columns with accession numbers with header
+    :type filename: str
+    :return: dataframe with data from the file
     """
     try:
         df = pd.read_csv(filename)
@@ -18,7 +20,11 @@ def load_data(filename):
 
 def get_names(df):
     """
-    function which save names from data frame to list
+    function to save names from data frame to list
+
+    :param df: dataframe with first column first names
+    :type df: dataframe
+    :return: list of accession numbers
     """
     family_names = []
     for (index, row) in df.iterrows():
@@ -28,17 +34,24 @@ def get_names(df):
     return family_names
 
 
-def download_hmm(families):
+def download_hmm(families, dir):
+    """
+    function to download hmm profiles of families which names are in the list
+
+    :param families: list of families
+    :type families: list
+    :param dir: name of directory to which data are downloaded
+    :type dir: str
+    :return: downloaded hmm files from pfam
+    """
     global type
-    with Bar('Processing', max=len(families)) as bar:
-        for family in families:
-            url = 'http://pfam.xfam.org/family/###FAMILY_NAME###/hmm'
-            url = url.replace('###FAMILY_NAME###', family)
-            r = requests.get(url, allow_redirects=True) # download hmm
-            r.raise_for_status()
-            pathname = "hmm_folder/" + family + '.hmm'
-            if not os.path.exists('./hmm_folder'):
-                os.makedirs('./hmm_folder')
-            f = open(pathname, 'wb').write(r.content)
-            bar.next()
+    for family in families:
+        url = 'http://pfam.xfam.org/family/###FAMILY_NAME###/hmm'
+        url = url.replace('###FAMILY_NAME###', family)
+        r = requests.get(url, allow_redirects=True) # download hmm
+        r.raise_for_status()
+        pathname = dir + "/" + family + '.hmm'
+        if not os.path.exists('./hmm_folder'):
+            os.makedirs('./hmm_folder')
+        f = open(pathname, 'wb').write(r.content)
 
