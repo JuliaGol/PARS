@@ -1,5 +1,6 @@
 class PfamArchitecture():
     """Simple class for protein domains architecture.
+    
     :param domains: list of domains in the architecture
     :type domains: list
     :param number_of_sequences: number of sequences with this architecture
