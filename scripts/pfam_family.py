@@ -5,6 +5,7 @@ from family_architectures import *
 class PfamFamily(XfamObject):
     
     """class contains information about pfam family.
+    
     :param access: pfam access of family
     :type access: str
     :param short_name: pfam id of family
@@ -36,6 +37,7 @@ class PfamFamily(XfamObject):
     """
     def __init__(self, family):
         """Constructor method.
+        
         :param family: pfam access or pfam family id
         :type family: str
         """
@@ -75,8 +77,8 @@ class PfamFamily(XfamObject):
     def get_full(self):
         """Get full alignemts of PfamFamily sequences in the fasta format.
         
-        :return: Biopython generator of sequences from alignment  
-        :rtype: generator
+        :return: Biopython iterator of sequences from alignment  
+        :rtype: Bio.SeqIO.FastaIO.FastaIterator
         """
         url = 'https://pfam.xfam.org/family/%s' % self.access
         url += '/alignment/full'
@@ -90,8 +92,8 @@ class PfamFamily(XfamObject):
     def get_seed(self):
         """Get seed alignemts of PfamFamily sequences in the fasta format.
         
-        :return: Biopython generator of sequences from alignment  
-        :rtype: generator
+        :return: Biopython iterator of sequences from alignment  
+        :rtype: Bio.SeqIO.FastaIO.FastaIterator
         """
         url = 'https://pfam.xfam.org/family/%s' % self.access
         url += '/alignment/seed'
