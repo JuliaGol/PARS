@@ -4,6 +4,7 @@ from xfam_to import *
 
 class PfamClan(XfamObject):
     """conteins information about Pfam clan.
+    
     :param access:
     :type access: str
     :param short_name:
@@ -60,7 +61,8 @@ class PfamClan(XfamObject):
         return list(set(families))
         
     def get_architectures(self):
-        """Get a list of architectures of PfamClan. 
+        """Get a list of architectures of Pfam clan.
+        
         :return: list of PfamArchitecture objects
         :rettype: list
         """
