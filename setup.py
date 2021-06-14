@@ -7,8 +7,7 @@ from setuptools import setup
 with open('README.md') as readme_file:
     readme = readme_file.read()
     
-with open('requirements.txt') as req_file:
-    requirements = req_file.read().splitlines()
+requirements = ['beautifulsoup4>=4.9.3', 'biopython>=1.79', 'setuptools>=50.3.0','requests~=2.25.1', 'bs4>=0.0.1']
 
 
 setup_requirements = ['pytest-runner', ]
