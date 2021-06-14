@@ -1,6 +1,6 @@
-from xfam_to import *
-from xfam_object import *
-from family_architectures import *
+from .xfam_to import *
+from .xfam_object import *
+from .family_architectures import *
 
 class PfamFamily(XfamObject):
     
