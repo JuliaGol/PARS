@@ -1,3 +1,9 @@
+
+import requests
+import re
+from Bio import SeqIO
+from io import StringIO
+
 def rfamily_seq(families, form='fasta', download = False, path = None):
     """This function search for sequences of the family in format and form specified by the user.
     
@@ -27,7 +33,7 @@ def rfamily_seq(families, form='fasta', download = False, path = None):
         url += '&format=%s&download=0' % form
         r = requests.get(url, allow_redirects=True)
         r.raise_for_status()
-        result.append(AlignIO.parse(StringIO(r.text), form))
+        result.append(SeqIO.parse(StringIO(r.text), form))
         if download:
             if path is not None:
                 pathname = '%s/%s.%s' % (path, family, form)
