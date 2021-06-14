@@ -6,7 +6,8 @@ from urllib.error import HTTPError, URLError
 from bs4 import BeautifulSoup
 
 def family_architectures(name,clan=False):
-    """ get domains architectures for given name.
+    """ Get domains architectures for given name.
+    
     :param name: pfam access key
     :type name: str
     :param clan: Is entry a clan?
