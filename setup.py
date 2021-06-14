@@ -46,7 +46,7 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/JuliaGol/PARS',
-    project_urls={"Bug Tracker":"https://github.com/JuliaGol/PARS/issues"}
+    project_urls={"Bug Tracker":"https://github.com/JuliaGol/PARS/issues"},
     version='0.1.0',
     zip_safe=False,
 )
