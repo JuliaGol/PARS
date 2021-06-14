@@ -24,7 +24,8 @@ class XfamObject():
             raise ValueError()
     
     def __set_access(self, db,type_,name):
-        """get access key for a given name
+        """get access key for a given name.
+        
         :param name: access or id of entry
         :type name: str
         :param type_: type of entry - clan or family
@@ -39,7 +40,8 @@ class XfamObject():
         acc = titles[titles.find("(")+1:titles.find(")")]
         return acc
     def __set_id(self, db, type_, name):
-        """get id for a given name
+        """get id for a given name.
+        
         :param name: access or id of entry
         :type name: str
         :param type_: type of entry - clan or family
@@ -61,6 +63,7 @@ class XfamObject():
     
     def get_tree(self):
         """Get phylogenetic tree of entry if entry is not a clan.
+        
         :return: Phylogenetic tree in newick format 
         :rettype: Bio.Phylo.Newick.Tree
         """
