@@ -3,6 +3,7 @@ from xfam_to import rfam_clan_to_pdb
 
 class RfamClan(XfamObject):
     """conteins inforation about Rfam Clan.
+    
     :param access: Rfam access of clan
     :type access: str
     :param short_name: Rfam id of clan
@@ -16,6 +17,7 @@ class RfamClan(XfamObject):
     """
     def __init__(self,clan):
         """Constructor method.
+        
         :param clan: rfam access or clan id
         :type family: str
         """
