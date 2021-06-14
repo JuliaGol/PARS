@@ -1,5 +1,5 @@
 import re
-import hmmer_file
+import pars.hmmer_file
 
 def to_dict(tab, mode):
     """
