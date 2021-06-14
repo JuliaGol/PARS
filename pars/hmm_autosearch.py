@@ -1,4 +1,4 @@
-import hmmer_command
+import pars.hmmer_command
 import os
 
 """
