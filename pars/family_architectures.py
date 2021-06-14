@@ -1,4 +1,4 @@
-from pfam_architecture import*
+from .pfam_architecture import*
 import requests
 import re
 from urllib.request import urlopen, Request
