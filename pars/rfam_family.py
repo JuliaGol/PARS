@@ -1,5 +1,5 @@
-from xfam_object import *
-from xfam_to import *
+from .xfam_object import *
+from .xfam_to import *
 
 class RfamFamily(XfamObject):
     """contains information about Rfam familly.
