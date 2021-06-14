@@ -7,7 +7,7 @@ from .hmm_download import*
 from .hmmer_command import*
 from .hmmer_file import*
 from .pfam_architecture import*
-from .pfamClan import*
+from .pfam_clan import*
 from .pfam_family import*
 from .pfam_sequences import*
 from .rfam_clan import*
