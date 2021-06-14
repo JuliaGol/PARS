@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 
 def _xfam_to(url, pattern, sep='/'):
     """serch for href pttern in given url respone, should not be used be users.
+    
     :param url: url
     :type url: str
     :param pattern: pattern you are looking for
@@ -26,6 +27,7 @@ def _xfam_to(url, pattern, sep='/'):
         
 def rfam_to_pubmed(family):
     """get a list of associated pubmed ids for given rfam access key.
+    
     :param family: rfam accession key of family
     :type family: str
     :return: List of associated pubmed ids
@@ -38,6 +40,7 @@ def rfam_to_pubmed(family):
 def rfam_to_go(family):
     
     """get a list of associated GO ids for given rfam access key.
+    
     :param family: rfam accession key of family
     :type family: str
     :return: List of associated Go ids
@@ -48,6 +51,7 @@ def rfam_to_go(family):
 
 def rfam_to_so(family):
     """ get a list of associated SO ids for given rfam access key.
+    
     :param family: rfam accession key of family
     :type family: str
     :return: List of associated SO ids
@@ -59,6 +63,7 @@ def rfam_to_so(family):
 
 def rfam_to_pdb(family):
     """get a list of associated PDB ids for given rfam access key.
+    
     :param family: rfam accession key of family
     :type family: str
     :return: List of associated PDB ids
@@ -69,6 +74,7 @@ def rfam_to_pdb(family):
     
 def pfam_to_pdb(family):
     """get a list of associated PDB ids for given pfam access key.
+    
     :param family: pfam accession key of family
     :type family: str
     :return: List of associated PDB ids
@@ -79,6 +85,7 @@ def pfam_to_pdb(family):
 
 def pfam_to_so(family):
     """get a list of associated SO ids for given pfam access key.
+    
     :param family: pfam accession key of family
     :type family: str
     :return: List of associated SO ids
@@ -89,6 +96,7 @@ def pfam_to_so(family):
 
 def pfam_to_pubmed(family):
     """get a list of associated pubmed ids for given pfam access key.
+    
     :param family: pfam accession key of family
     :type family: str
     :return: List of associated Pubmed ids
@@ -99,6 +107,7 @@ def pfam_to_pubmed(family):
 
 def pfam_to_go(family):
     """get a list of associated GO ids for given pfam access key.
+    
     :param family: pfam accession key of family
     :type family: str
     :return: List of associated GO ids
@@ -109,6 +118,7 @@ def pfam_to_go(family):
 
 def pfam_clan_to_pdb(clan):
     """get a list of associated PDB ids for given pfam clan access key.
+    
     :param clan: pfam accession key of clan
     :type clan: str
     :return: List of associated PDB ids
@@ -119,6 +129,7 @@ def pfam_clan_to_pdb(clan):
 
 def rfam_clan_to_pdb(clan):
     """get a list of associated PDB ids for given rfam clan access key.
+    
     :param clan: rfam accession key of clan
     :type clan: str
     :return: List of associated PDB ids
