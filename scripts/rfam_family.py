@@ -3,6 +3,7 @@ from xfam_to import *
 
 class RfamFamily(XfamObject):
     """contains information about Rfam familly.
+    
     :param access: Rfam access of family
     :type access: str
     :param short_name: Rfam id of family
@@ -20,6 +21,7 @@ class RfamFamily(XfamObject):
     """
     def __init__(self,family):
         """Constructor method.
+        
         :param family: rfam access or family id
         :type family: str
         """
@@ -31,9 +33,10 @@ class RfamFamily(XfamObject):
         self.pdb_ref=rfam_to_pdb(self.access)
         
     def get_sequences(self):
-        """Get seed alignemts of RfamFamily sequences in fasta format.
-        :return: Biopython generator of sequences from alignment  
-        :rtype: generator"""
+        """Get alignemts of RfamFamily sequences in fasta format.
+        
+        :return: Biopython iterator of sequences from alignment  
+        :rtype: Bio.SeqIO.FastaIO.FastaIterator"""
         url = 'https://rfam.xfam.org/family/%s' % self.access
         url += '/alignment?acc=%s' % self.access
         url += '&format=fastas&download=0'
