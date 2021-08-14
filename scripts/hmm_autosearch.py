@@ -1,4 +1,4 @@
-import hmmer_command
+from .hmmer_command import *
 import os
 
 """
@@ -28,12 +28,12 @@ def automatic_search(hmm_dir, fasta_dir, out_dir, mode):
                     #define paths
                     hmm_path = hmm_dir + "/" + str(hmm_file)
                     out_path = out_dir + "/" + str(hmm_file)+str(fasta_file)+"_out"
-                    hmmer_command.hmmpress(hmm_file=hmm_path) #execute command of hmmpress which prepars files for hmmscan
-                    hmmer_command.hmmscan(o=out_path, hmm_file=hmm_path, fasta_file=fasta_path) #execute command of  hmmscan
+                    hmmpress(hmm_file=hmm_path) #execute command of hmmpress which prepars files for hmmscan
+                    hmmscan(o=out_path, hmm_file=hmm_path, fasta_file=fasta_path) #execute command of  hmmscan
             else:
                 for hmm_file in dir_hmm_list: #iterate over files in polder
                     #define paths
                     hmm_path = hmm_dir + "/" + str(hmm_file)
                     out_path = out_dir + "/" + str(hmm_file)+str(fasta_file)+"_out"
-                    hmmer_command.hmmsearch(o=out_path, hmm_file=hmm_path, fasta_file=fasta_path) #execute command of  hmmsearch
+                    hmmsearch(o=out_path, hmm_file=hmm_path, fasta_file=fasta_path) #execute command of  hmmsearch
 

@@ -1,5 +1,5 @@
 import re
-import hmmer_file
+from .hmmer_file import *
 
 def to_dict(tab, mode):
     """
@@ -164,7 +164,7 @@ def file_to_object(filename):
                 insert_emission += [to_dict(linetab, mode)]
             if mode == 0:
                 state_transition += [to_dict(linetab, mode)]
-    object = hmmer_file.HMMERProfileFileBuilder(version, name, acc, desc, alph, rf, mm, cons, cs, map, date, nseq, effn, # use parsed arguments to make an object
+    object = HMMERProfileFileBuilder(version, name, acc, desc, alph, rf, mm, cons, cs, map, date, nseq, effn, # use parsed arguments to make an object
                cksum, ga, tc, nc, bm, sm, msv, viterbi, forward, match_emission, insert_emission, state_transition)
     return object
 
