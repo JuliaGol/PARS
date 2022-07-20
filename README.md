@@ -15,7 +15,7 @@ $ git clone git: https://github.com/JuliaGol/PARS.git
 $ python setup.py install
 ```
 
-If you want to use functions: automatic_search, hmmpress, hmmscan, hmmsearch you have to install HAMMER tools additionally. For more information about HAMMER see: [hmmer.org](http://hmmer.org).
+If you want to use functions: automatic_search, hmmpress, hmmscan, hmmsearch you have to install HAMMER tools additionally. For more information about HMMER see: [hmmer.org](http://hmmer.org).
 ## Documentation
 To read the documentation click here: [documentation](https://owczarekp.github.io/PARS/ ) 
 ## Examples
