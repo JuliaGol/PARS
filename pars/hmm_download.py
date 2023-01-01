@@ -49,12 +49,16 @@ def download_hmm(families, dir):
     """
     global type
     for family in families:
-        url = 'http://pfam.xfam.org/family/###FAMILY_NAME###/hmm'
+        url = 'https://www.ebi.ac.uk/interpro/wwwapi//entry/pfam/###FAMILY_NAME###?annotation=hmm' #'http://pfam.xfam.org/family/###FAMILY_NAME###/hmm'
         url = url.replace('###FAMILY_NAME###', family)
         r = requests.get(url, allow_redirects=True) # download hmm
         r.raise_for_status()
-        pathname = dir + "/" + family + '.hmm'
+        pathname = dir + "/" + family + '.gz'
         if not os.path.exists('./hmm_folder'):
             os.makedirs('./hmm_folder')
         f = open(pathname, 'wb').write(r.content)
-
+        #downloaded file is compressed
+        #dompress
+        os.system("gzip -dv " + pathname)
+        #rename with extention
+        os.rename(pathname[:-3], pathname[:-3] + ".hmm")
